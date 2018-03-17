@@ -84,7 +84,7 @@ if [ "$GIGALIXIR_SHOULD_HOT_UPGRADE" = "true" ]; then
   # well known dir.. would love to pass it in, but buildpack system doesn't do it for us.
     cp -r /tmp/in/_build .
     echo "ls /tmp/in/_build"
-    echo `/tmp/in/_build`
+    echo `ls /tmp/in/_build`
     echo
     echo "ls _build/"
     echo `ls _build/`
