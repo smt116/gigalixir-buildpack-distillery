@@ -83,12 +83,24 @@ echo $RELEASE_ENV
 if [ "$GIGALIXIR_SHOULD_HOT_UPGRADE" = "true" ]; then
   # well known dir.. would love to pass it in, but buildpack system doesn't do it for us.
     cp -r /tmp/in/_build .
+    echo "ls /tmp/in/_build"
+    echo `/tmp/in/_build`
+    echo
     echo "ls _build/"
     echo `ls _build/`
+    echo
+    echo "ls _build/prod"
+    echo `ls _build/prod`
+    echo
+    echo "ls _build/prod/rel/"
+    echo `ls _build/prod/rel/`
+    echo
     echo "ls _build/${RELEASE_ENV}/"
     echo `ls _build/${RELEASE_ENV}/`
+    echo
     echo "ls _build/${RELEASE_ENV}/rel/"
     echo `ls _build/${RELEASE_ENV}/rel/`
+    echo
   # TODO: duplicated below
   DIRS=(`ls -Ad _build/${RELEASE_ENV}/rel/*/`)
   if [ ${#DIRS[@]} -ne 1 ]; then
